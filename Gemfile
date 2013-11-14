@@ -25,7 +25,7 @@ group :assets do
 end
 
 group :development do
-	gem 'annotate', ''
+	gem 'annotate', '~> 2.5.0'
 end
 
 group :development, :test do	
