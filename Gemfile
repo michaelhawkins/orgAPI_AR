@@ -24,7 +24,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :development do
+	gem 'annotate', ''
+end
 
 group :development, :test do	
 	gem "rspec-rails", ">= 2.11.0"
