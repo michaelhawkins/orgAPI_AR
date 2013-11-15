@@ -1,15 +1,5 @@
 OrgAPIAr::Application.routes.draw do
-  get "employees/new"
-
-  get "employees/update"
-
-  get "employees/index"
-
-  get "employees/show"
-
-  get "employees/create"
-
-  get "employees/destroy"
+  resources :employees
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
