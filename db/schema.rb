@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131115034816) do
+ActiveRecord::Schema.define(:version => 20131115050311) do
+
+  create_table "employee_organization_memberships", :force => true do |t|
+    t.integer  "employee_id"
+    t.integer  "organization_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "employee_organization_memberships", ["employee_id", "organization_id"], :name => "index_emp_org_memberships_on_empid_orgid", :unique => true
+  add_index "employee_organization_memberships", ["employee_id"], :name => "index_employee_organization_memberships_on_employee_id"
+  add_index "employee_organization_memberships", ["organization_id"], :name => "index_employee_organization_memberships_on_organization_id"
 
   create_table "employees", :force => true do |t|
     t.string   "first_name"

@@ -21,4 +21,11 @@ class Employee < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+
+  has_many :employee_organization_memberships, foreign_key: "organization_id", dependent: :destroy
+
+  has_many :organizations, through: :employee_organization_memberships
+
+   
+
 end
