@@ -10,6 +10,7 @@ gem 'rails', '3.2.13'
 gem 'pg', '0.17.0'
 gem 'figaro', '0.7.0'
 gem 'jquery-rails', '~> 3.0.4'
+gem 'rails_12factor', '0.0.2'
 
 
 # Gems used only for assets and not required
